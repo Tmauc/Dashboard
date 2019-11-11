@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Maple - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -36,16 +36,26 @@
     }
 
     function addWidget() {
-      var div = document.createElement("iframe");
-      div.setAttribute("src", "https://store.steampowered.com/widget/383980/");
-      div.setAttribute("frameborder", "0");
-      div.setAttribute("width", "646");
-      div.setAttribute("height", "190");
-      
-      var textnode = document.createTextNode("ui ?");
+      const modal = '<div class=\"steamwidget card mb-4 border-left-primary\"> \
+                      <div class="card-body py-3"> \
+                        <div class=\"dropdown no-arrow mb-4 \"> \
+                          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> \
+                            <i class="fas fa-ellipsis-h"> Edit</i> \
+                          </button> \
+                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\"> \
+                            <a class=\"dropdown-item\" onclick=\"removeWidget()\">Delete</a> \
+                          </div> \
+                        </div> \
+                      <iframe src=\"https://store.steampowered.com/widget/383980/\" frameborder=\"0\" width =\"646\" height=\"190\"></iframe> \
+                      </div> \
+                    </div>';
+      $("#steamroot").append(modal);  
+    }
+    function removeWidget() {
+      $(".steamwidget").remove();
+    }
+    function generateModal() {
 
-      div.appendChild(textnode);
-      document.getElementById("steamroot").appendChild(div);      
     }
   </script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
@@ -95,14 +105,10 @@
           </a>
           <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="login.html">Login</a>
-              <a class="collapse-item" href="register.html">Register</a>
-              <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+              <h6 class="collapse-header">In Progress:</h6>
+              <a class="collapse-item" onclick="addWidget()">Steam Widget</a>
               <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other Pages:</h6>
-              <a class="collapse-item" href="404.html">404 Page</a>
-              <a class="collapse-item" href="blank.html">Blank Page</a>
+              <h6 class="collapse-header">Other:</h6>
             </div>
           </div>
       </li>
@@ -314,14 +320,7 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
           </div>
-
-       
-
-          <div>
-            You've clicked <span id="number"></span> times
-            <button onclick="addWidget()">Click me</button>
-          </div>
-
+          
           <div id="steamroot"></div>
 
           
