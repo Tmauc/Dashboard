@@ -18,46 +18,17 @@
   <!-- Custom styles for this template-->
   <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
 
-  <!-- Test button script-->
-  <script type="text/javascript">
-    function loadNumber() {
-      var nb;
-      nb = 0;
-      document.getElementById("number").innerHTML = nb;
-    }
 
-    function getNumber() {
-      return(document.getElementById("number").innerHTML);
-    }
 
-    function increment(nb) {
-      tmp = parseInt(nb) + 1;
-      document.getElementById("number").innerHTML = tmp;
-    }
 
-    function addWidget() {
-      const modal = '<div class=\"steamwidget card mb-4 border-left-primary\"> \
-                      <div class="card-body py-3"> \
-                        <div class=\"dropdown no-arrow mb-4 \"> \
-                          <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> \
-                            <i class="fas fa-ellipsis-h"> Edit</i> \
-                          </button> \
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\"> \
-                            <a class=\"dropdown-item\" onclick=\"removeWidget()\">Delete</a> \
-                          </div> \
-                        </div> \
-                      <iframe src=\"https://store.steampowered.com/widget/383980/\" frameborder=\"0\" width =\"646\" height=\"190\"></iframe> \
-                      </div> \
-                    </div>';
-      $("#steamroot").append(modal);  
-    }
-    function removeWidget() {
-      $(".steamwidget").remove();
-    }
-    function generateModal() {
 
-    }
-  </script>
+  <!-- API SCRIPT-->
+  <script src="../assets/js/app.js"></script>
+
+
+
+
+  
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
 
 <!--<div class="fb-page" data-href="https://www.facebook.com/Gametek.epitech/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
@@ -86,16 +57,6 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="template.html">
-          <i class="fas fa-fw fa-eye"></i>
-          <span>See template</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
@@ -322,6 +283,47 @@
           </div>
           
           <div id="steamroot"></div>
+
+
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+          
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
 
           
 
