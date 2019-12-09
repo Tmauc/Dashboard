@@ -1,55 +1,52 @@
 ﻿<!DOCTYPE html>
-<html>
 
-<head>
-	<title>Dashboard - Authentification</title>
-	<meta charset="utf-8">
-	<link href="../assets/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<body>
-	<div class="login-wrap">
-		<div class="login-html">
-			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
-				In</label>
-			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-			<div class="login-form">
-				<div class="sign-in-htm">
-					<form method="post" action="/login">
-						<div class="group">
-							<label class="label">Email Address</label>
-							<input name="email" type="text" class="input">
-						</div>
-						<div class="group">
-							<label class="label">Password</label>
-							<input name="password" type="password" class="input">
-						</div>
-						<div class="group">
-							<input type="submit" class="button" value="Sign In">
-						</div>
-					</form>
+<div class="container">
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default" style="margin-top:10px;">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Login via site</h3>
+			 		</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" method="post" action="/login">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="yourmail@example.com" name="email" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		</div>
+			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+			    	</fieldset>
+			      	</form>
+                      <hr/>
+										<center><h4>OR</h4></center>
+                    <a href="/auth/facebook" class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook"><i class="fab fa-facebook"></i>Facebook</a>
+					</div>
+    		</div>
+					<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Register via site</h3>
+						 </div>
+							<div class="panel-body">
+								<form accept-charset="UTF-8" role="form" method="post" action="/register">
+												<fieldset>
+										<div class="form-group">
+											<input class="form-control" placeholder="yourmail@example.com" name="email" type="text">
+									</div>
+									<div class="form-group">
+										<input class="form-control" placeholder="Password" name="password" type="password" value="">
+									</div>
+									<input class="btn btn-lg btn-success btn-block" type="submit" value="Register">
+								</fieldset>
+									</form>
+							</div>
 				</div>
-				<div class="sign-up-htm">
-					<form method="post" action="/register">
-						<div class="group">
-							<label class="label">Email Address</label>
-							<input name="email" type="text" class="input">
-						</div>
-						<div class="group">
-							<label class="label">Password</label>
-							<input name="password" type="password" class="input">
-						</div>
-						<div class="group">
-							<input type="submit" class="button" value="Sign Up">
-						</div>
-					</form>
-				</div>
-			</div>
 		</div>
 	</div>
-</body>
-
-</html>
+</div>

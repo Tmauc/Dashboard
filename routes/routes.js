@@ -1,4 +1,7 @@
 var User = require('./user.js');
+var passport = require('passport')
+
+require('../init/passport')(passport)
 
 module.exports = function (app, passport, request, nodeWidget, fs) {
 
@@ -11,6 +14,15 @@ module.exports = function (app, passport, request, nodeWidget, fs) {
             message: req.flash('loginMessage')
         });
     });
+
+    app.get('/auth/facebook', passport.authenticate('facebook', {
+        scope: ['public_profile', 'email']
+    }));
+
+    app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+        successRedirect: '/home',
+        failureRedirect: '/'
+    }));
 
     app.post('/login', passport.authenticate('local-login', {
         successRedirect: '/home',
