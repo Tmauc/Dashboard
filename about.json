@@ -1,0 +1,50 @@
+{
+    " client ": {
+        " host ": "127.0.0.1"
+    },
+    " server ": {
+        " current_time ": 1576434584,
+        " services ": [
+        {
+            " name ": " weather ",
+            " widgets ": [
+            {
+                " name ": " weather",
+                " description ": " Affichage de la temperature, temperature minimale, maximale, vitesse du vent, description du ciel pour une ville ",
+                " params ": [
+                {
+                    " name ": " city ",
+                    " type ": " string "
+                }
+                ]
+            }
+            ]
+        },
+        {
+            " name ": " movies ",
+            " widgets ": [
+            {
+                " name ": " movie_desc ",
+                " description ": " Affichage du réalisateur, des acteurs, la date de sortie, le genre et le synopsis pour un film ",
+                " params ": [
+                {
+                    " name ": " movie ",
+                    " type ": " string "
+                }
+                ]
+            },
+            {
+                " name ": " movie_rating ",
+                " description ": " Affichage des awards, du box office, du nombre de vote sur imdb et d'une liste des notes et de leur source pour un film ",
+                " params ": [
+                {
+                    " name ": " movie ",
+                    " type ": " string "
+                }
+                ]
+            }
+            ]
+        }
+        ]
+    }
+}

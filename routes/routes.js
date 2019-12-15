@@ -44,6 +44,10 @@ module.exports = function (app, passport, request, nodeWidget, fs) {
         res.sendFile('/app/public/index.html');
     });
 
+    app.get('/about', isLoggedIn, function (req, res, next) {
+        res.sendFile('/app/about.json');
+    });
+
     app.get('/:username/:password', function (req, res) {
         var newUser = new User();
         newUser.local.username = req.params.username;
