@@ -37,7 +37,7 @@
       background-color: #0d2456 \9 !important;
   }
 
-  #weather, #ToDoList, #Lmovies, #Dmovies, #Amovies, #MoneyConverter {
+  #weather, #Dmovies, #Amovies {
     display: none;
     background: white;
     margin: 20px;
@@ -45,7 +45,7 @@
     border-radius: 10%;
   }
 
-  #weather h3 {
+  #weather h3, #Dmovies h3, #Amovies h3 {
     color: #337AFF;
   }
 
@@ -59,7 +59,7 @@
     padding: -20px 20px;
   }
 
-  .weather-input {
+  .Dinput{
     width: 50%;
     font-size: 20px;
     border: 0px;
@@ -68,14 +68,4 @@
     padding: 10px 15px;
     margin: 0px 15px 20px 0px;
     text-align: center;
-}
-
-.weather-button{
-    background: #333;
-    border: 0px none #333;
-    color: #aaa;
-    padding: 10px 30px;
-    width: 50%;
-    min-width: 200px;
-    font-size: 15px;
-}
+  }
