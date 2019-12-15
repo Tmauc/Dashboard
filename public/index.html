@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
 
 
@@ -66,10 +67,9 @@
           </a>
           <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">In Progress:</h6>
+              <h6 class="collapse-header">Widgets:</h6>
               <a class="collapse-item" onclick="addWidget()">Steam Widget</a>
-              <div class="collapse-divider"></div>
-              <h6 class="collapse-header">Other:</h6>
+              <a class="collapse-item" onclick="ChangeWeather()">Weather Widget</a>
             </div>
           </div>
       </li>
@@ -244,8 +244,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Mauc le bg</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/random/60x60">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -283,12 +283,6 @@
           </div>
           
           <div id="steamroot"></div>
-
-
-
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
           
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -318,6 +312,24 @@
               </div>
             </div>
           </div>
+          <div class="container-fluid bg-3 text-center">
+            <div class="row">
+                <div id="weather" class="col-sm-4">
+                    <input class="deleteWidget" type="submit" value="-" OnClick="RemoveWeather()">
+                    <h3 class="title">Weather</h3>
+                    <input id="city" class="weather-input" type="text" placeholder="Enter a City" required>
+                    <input type="submit" class="btn btn-primary" value="Get Weather" OnClick="weather()">
+                    <div class="hr2"></div>
+                    <div class="weatherDisplay">
+                        <h3 id="weatherCity"></h3>
+                        <p id="temp"></p>
+                        <p id="tempMinMax"></p>
+                        <p id="wind"></p>
+                        <p id="desc"></p>
+                    </div>
+                </div>
+              </div>
+            </div>
 
 
 

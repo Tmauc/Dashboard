@@ -36,3 +36,46 @@
   .btn-facebook.active {
       background-color: #0d2456 \9 !important;
   }
+
+  #weather, #ToDoList, #Lmovies, #Dmovies, #Amovies, #MoneyConverter {
+    display: none;
+    background: white;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10%;
+  }
+
+  #weather h3 {
+    color: #337AFF;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .deleteWidget {
+    right: 20px;
+    position: absolute;
+    padding: -20px 20px;
+  }
+
+  .weather-input {
+    width: 50%;
+    font-size: 20px;
+    border: 0px;
+    color: #333;
+    background: whitesmoke;
+    padding: 10px 15px;
+    margin: 0px 15px 20px 0px;
+    text-align: center;
+}
+
+.weather-button{
+    background: #333;
+    border: 0px none #333;
+    color: #aaa;
+    padding: 10px 30px;
+    width: 50%;
+    min-width: 200px;
+    font-size: 15px;
+}
