@@ -37,7 +37,7 @@
       background-color: #0d2456 \9 !important;
   }
 
-  #weather, #Dmovies, #Amovies {
+  #weather, #Dmovies, #Amovies, #SteamWidget {
     display: none;
     background: white;
     margin: 20px;
@@ -45,7 +45,7 @@
     border-radius: 10%;
   }
 
-  #weather h3, #Dmovies h3, #Amovies h3 {
+  #weather h3, #Dmovies h3, #Amovies #SteamWidget h3 {
     color: #337AFF;
   }
 

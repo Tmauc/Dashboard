@@ -30,10 +30,11 @@ async function callSteam(gamename) {
         appId = retrieveOui(response.data.applist, gamename);
         appId = appId.appid.toString();
         axios.get('https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=383980'/* + appId*/)
-    /*.then(function (response) {
-        callRiot(user, response.data.response.player_count)
-    })*/
     });
+}
+
+function retrieveOui(applist, gamename) {
+    applist.apps.find(x => x.name.toString().toLowerCase() === gamename.toLowerCase());
 }
 
 function removeWidget() {

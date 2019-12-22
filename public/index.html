@@ -32,11 +32,6 @@
   
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
 
-<!--<div class="fb-page" data-href="https://www.facebook.com/Gametek.epitech/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-    <blockquote cite="https://www.facebook.com/Gametek.epitech/" class="fb-xfbml-parse-ignore">
-        <a href="https://www.facebook.com/Gametek.epitech/">Gametek</a>
-    </blockquote>
-</div>-->
 
 </head>
 
@@ -68,7 +63,7 @@
           <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Widgets:</h6>
-              <a class="collapse-item" onclick="addWidget()">Steam Widget</a>
+              <a class="collapse-item" onclick="ChangeSteamWidget()">Steam Widget</a>
               <a class="collapse-item" onclick="ChangeWeather()">Weather Widget</a>
               <a class="collapse-item" onclick="ChangeMoviesDesc()">Movie Description</a>
               <a class="collapse-item" onclick="ChangeMoviesRatings()">Movie Ratings</a>
@@ -316,6 +311,8 @@
           </div>
           <div class="container-fluid bg-3 text-center">
             <div class="row">
+
+                <!-- Weather widget -->
                 <div id="weather" class="col-sm-4">
                     <input class="deleteWidget" type="submit" value="-" OnClick="RemoveWeather()">
                     <h3 class="title">Weather</h3>
@@ -330,6 +327,8 @@
                         <p id="desc"></p>
                     </div>
                 </div>
+
+                <!-- Movie description widget -->
                 <div id="Dmovies" class="col-sm-4">
                     <input class="deleteWidget" type="submit" value="-" OnClick="RemoveMoviesDesc()">
                     <h3 class="title">Movie Description</h3>
@@ -344,6 +343,8 @@
                         <p id="plot"></p>
                     </div>
                 </div>
+
+                <!-- Movie ratings widget -->
                 <div id="Amovies" class="col-sm-4">
                     <input class="deleteWidget" type="submit" value="-" OnClick="RemoveMoviesRatings()">
                     <h3 class="title">Movie Ratings</h3>
@@ -357,6 +358,19 @@
                         <table id="listRatings"></table>
                     </div>
                 </div>
+
+                <!-- Steam widget -->
+                <div id="SteamWidget" class="col-sm-4">
+                    <input class="deleteWidget" type="submit" value="-" OnClick="RemoveSteamWidget()">
+                    <h3 class="title">Games on Steam</h3>
+                    <input id="GameInput" class="Dinput" type="text" placeholder="Enter a game" required>
+                    <input type="submit" class="btn btn-primary"  value="Get Infos" OnClick="steamGames()">
+                    <div class="hr"></div>
+                    <div class="gamesDisplay">
+                        <p id="playerCount"></p>
+                    </div>
+                </div>
+
               </div>
             </div>
 
