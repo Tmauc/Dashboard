@@ -1,10 +1,8 @@
-DASHBOARD
-
-Pour lancer le projet effectuer les commandes à la racine:
+# Dashboard
+Dashboard - EPITECH project. This project asks us to implement a web application that works like Netvibes.
+# USAGE
+```bash
 docker-compose build
 docker-compose up
-
-Puis aller sur: localhost:8080
-
-Pour arreter les dockers faites:
 docker-compose down
+```
